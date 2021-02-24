@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--MARGINS-->
+    <dimen name="layout_margin_tiny">4dp</dimen>
+    <dimen name="layout_margin_small">8dp</dimen>
+    <dimen name="layout_margin_medium">16dp</dimen>
+    <dimen name="layout_margin_large">32dp</dimen>
+
+    <!--DIMENS-->
+    <dimen name="main_icon_height">120dp</dimen>
+</resources>
