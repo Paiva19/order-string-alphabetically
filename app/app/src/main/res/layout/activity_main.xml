@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".alphabetize.AlphabetizeActivity"
     android:orientation="vertical"
     android:gravity="center_vertical"
     android:padding="@dimen/layout_margin_medium">
@@ -14,13 +14,13 @@
         android:src="@color/black"/>
 
     <EditText
+        android:id="@+id/textToBeAlphabetizedEt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/layout_margin_large"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/alphabetizeBtn"
-        tools:context=".MainActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
