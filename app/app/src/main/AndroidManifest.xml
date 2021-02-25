@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Alphabetically">
-        <activity android:name=".alphabetize.MainActivity">
+        <activity android:name=".alphabetize.AlphabetizeActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

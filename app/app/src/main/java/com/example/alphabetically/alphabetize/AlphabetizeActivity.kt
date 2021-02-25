@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.activity.viewModels
+import androidx.compose.ui.text.input.textInputServiceFactory
+import androidx.lifecycle.Observer
 import com.example.alphabetically.R
 
 class AlphabetizeActivity : AppCompatActivity() {
@@ -14,7 +16,7 @@ class AlphabetizeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_alphabetize)
         setListeners()
         setObservers()
     }
@@ -22,20 +24,23 @@ class AlphabetizeActivity : AppCompatActivity() {
     private fun setListeners() {
         val button = findViewById<Button>(R.id.alphabetizeBtn)
         val editText = findViewById<EditText>(R.id.textToBeAlphabetizedEt)
-        val textView = findViewById<TextView>(R.id.alphabetizedTextTv)
 
         button.setOnClickListener {
-            alphabetizeAndDisplayText(textView, editText.text.toString())
+            alphabetizeAndDisplayText(editText.text.toString())
         }
     }
 
-    private fun alphabetizeAndDisplayText(viewToDisplay: TextView, textToBeAlphabetized: String) {
-        viewToDisplay.text = viewModel.onClickAlphabetize(textToBeAlphabetized)
+    private fun alphabetizeAndDisplayText(textToBeAlphabetized: String) {
+        viewModel.onClickAlphabetize(textToBeAlphabetized)
     }
 
     private fun setObservers() {
-//        TODO...
+        viewModel.orderedText.observe(
+                this,
+                Observer<String> { newName ->
+                    val textView = findViewById<TextView>(R.id.alphabetizedTextTv)
+                    textView.text = newName
+                }
+        )
     }
-
-
 }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--STANDARD COLORS-->
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -8,9 +9,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="color_pastel_green">#5FA088</color>
-    <color name="color_pastel_red">#A05F77</color>
+    <!--CUSTOM COLORS-->
+    <color name="color_pastel_green">#FF5FA088</color>
+    <color name="color_pastel_dark_green">#FF387860</color>
+    <color name="color_pastel_light_green">#FFA0E1C9</color>
+    <color name="color_pastel_red">#FFA05F77</color>
 
+    <!--COMPONENT COLORS-->
     <color name="color_primary">@color/color_pastel_green</color>
     <color name="color_primary_complementary">@color/color_pastel_red</color>
+
 </resources>
